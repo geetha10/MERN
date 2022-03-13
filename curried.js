@@ -9,4 +9,8 @@ function ninjaBelt(ninja){
     }
 }
 
-console.log(ninjaBelt('Eileen')('black')); //note the double invocation here.
+ninjaBelt('Eileen')('black'); 
+
+
+
+//note the double invocation here.
