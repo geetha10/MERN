@@ -1,0 +1,13 @@
+.form{
+    margin: 15px;
+}
+
+.form >div >label{
+    margin: 10px;
+}
+.form >div >input{
+    margin: 10px;
+}
+.form >div >button{
+    margin: 10px;
+}

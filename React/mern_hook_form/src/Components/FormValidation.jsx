@@ -30,10 +30,10 @@ function FormValidation() {
         <form>
             <div>
                 <label>UserName</label>
-                <input type="text" name="username" value={user.username} />
-                {
-                    st
-                }
+                <input type="text" name="username" value={initialState.username.value} />
+                {initialState.username.error !== null && (
+                    <p className="error">{initialState.username.error}</p>
+                )}
             </div>
         </form>
     </div>
