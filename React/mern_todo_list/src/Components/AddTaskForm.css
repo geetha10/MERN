@@ -1,0 +1,20 @@
+.addTaskForm{
+    margin: 15px;
+}
+
+.addTaskForm >div >label{
+    margin: 10px;
+    padding: 10px;
+}
+.addTaskForm >div >input{
+    margin: 10px;
+    padding: 10px;
+}
+.addTaskForm >div >button{
+    margin: 10px;
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid 2px;
+}

@@ -9,8 +9,8 @@ function BoxForm(props) {
     const handleSubmit =(e) =>{
         e.preventDefault();
         const newBox={
-            color:color,
-            size:size
+            color,
+            size
 
         }
         setColor("");

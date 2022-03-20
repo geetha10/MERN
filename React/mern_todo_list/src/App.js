@@ -1,23 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react'
+import AddTaskForm from './Components/AddTaskForm';
+import DisplayList from './Components/DisplayList';
+
 
 function App() {
+  const [toDoList, setToDoList] = useState([]);
+
+  const addTask =(newTask) =>{
+    setToDoList([
+      ...toDoList, 
+      newTask
+    ]);
+  }
+
+  const updateTask = (index) =>{
+    console.log("Update List in App.js:", index)
+    const updatedList=[
+      ...toDoList
+    ]
+    updatedList[index].isComplete ? updatedList[index].isComplete=false :updatedList[index].isComplete=true 
+    setToDoList(updatedList)
+  }
+
+  const deleteTask = (index) =>{
+    const updatedList=toDoList.filter((task,i) => i != index)
+    setToDoList(updatedList)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddTaskForm addTask={addTask}/>
+      <DisplayList toDoList={toDoList} updateTask={updateTask} deleteTask={deleteTask}/>
     </div>
   );
 }
